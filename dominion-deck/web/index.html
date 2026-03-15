@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dominion — Chapter 1: Athens, 479 BC</title>
+  <link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
+  <style>
+    /* ── Design System Tokens ── */
+    :root {
+      --obsidian:   #1A1714;
+      --umber:      #3D2B1F;
+      --terracotta: #8B4513;
+      --gold:       #C9A96E;
+      --parchment:  #F0E6D3;
+      --stone:      #D4C5A9;
+      --cream:      #FAF5EB;
+      --slate:      #5C5347;
+      --muted:      #8A7E6B;
+    }
+
+    /* ── Global Reset ── */
+    .reveal { font-family: Calibri, 'Gill Sans', sans-serif; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: Georgia, 'Times New Roman', serif; }
+    .reveal .slides { text-align: left; }
+    .reveal .slides section { padding: 0; box-sizing: border-box; }
+
+    /* ── Slide Container ── */
+    .slide-inner {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    /* ── Left Column (60%) ── */
+    .col-left {
+      width: 60%;
+      padding: 2.2em 0 0 3.4em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    .slide-num {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 0.48em;
+      font-style: italic;
+      margin-bottom: 0.6em;
+    }
+
+    .slide-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.42em;
+      font-weight: bold;
+      line-height: 0.92;
+      margin: 0 0 0.45em 0;
+      text-transform: uppercase;
+    }
+
+    .slide-subtitle {
+      font-size: 0.58em;
+      font-style: italic;
+      line-height: 1.25;
+      margin: 0 0 0.7em 0;
+      max-width: 90%;
+    }
+
+    .slide-body {
+      font-size: 0.52em;
+      line-height: 1.4;
+      margin: 0;
+      max-width: 90%;
+    }
+
+    /* ── Vertical Divider ── */
+    .divider {
+      width: 1px;
+      align-self: stretch;
+      margin: 3.4em 0;
+    }
+
+    /* ── Right Column (40%) ── */
+    .col-right {
+      width: 40%;
+      padding: 2.8em 2em 0 1.6em;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    .artwork-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 70%;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0.6em;
+    }
+
+    .artwork-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 0.52em;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0 0 0.25em 0;
+    }
+
+    .artwork-detail {
+      font-size: 0.40em;
+      font-style: italic;
+      margin: 0 0 0.5em 0;
+    }
+
+    .artwork-hr {
+      width: 4em;
+      height: 1px;
+      border: none;
+      margin: 0 0 0.5em 0;
+    }
+
+    .curator-note {
+      font-size: 0.44em;
+      font-style: italic;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    /* ── Footer ── */
+    .slide-footer {
+      position: absolute;
+      bottom: 1.2em;
+      left: 3.4em;
+      font-size: 0.32em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* ── Dark Theme ── */
+    .dark { background-color: var(--obsidian) !important; }
+    .dark .slide-num      { color: var(--parchment); }
+    .dark .slide-title    { color: var(--parchment); }
+    .dark .slide-subtitle { color: var(--gold); }
+    .dark .slide-body     { color: var(--stone); }
+    .dark .divider        { background-color: var(--umber); }
+    .dark .artwork-title  { color: var(--gold); }
+    .dark .artwork-detail { color: var(--muted); }
+    .dark .artwork-hr     { background-color: var(--umber); }
+    .dark .curator-note   { color: var(--muted); }
+    .dark .slide-footer   { color: var(--muted); }
+
+    /* ── Light Theme ── */
+    .light { background-color: var(--cream) !important; }
+    .light .slide-num      { color: var(--slate); }
+    .light .slide-title    { color: var(--obsidian); }
+    .light .slide-subtitle { color: var(--terracotta); }
+    .light .slide-body     { color: var(--slate); }
+    .light .divider        { background-color: var(--stone); }
+    .light .artwork-title  { color: var(--terracotta); }
+    .light .artwork-detail { color: var(--muted); }
+    .light .artwork-hr     { background-color: var(--stone); }
+    .light .curator-note   { color: var(--muted); }
+    .light .slide-footer   { color: var(--muted); }
+
+    /* ── Reveal overrides ── */
+    .reveal .slide-background { background: none !important; }
+    .reveal .slides section[data-background-color] { color: inherit; }
+    .reveal .progress { color: var(--gold); }
+    .reveal .controls { color: var(--gold); }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 01 — Dark -->
+      <section class="dark">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">01</div>
+            <h1 class="slide-title">THE NAIL<br>AND THE BOARD</h1>
+            <p class="slide-subtitle">Crucifixion-style execution predates Christianity by centuries</p>
+            <p class="slide-body">In 479 BC, Athenians nailed the Persian governor Artaÿctes to a wooden board at the Hellespont — on the very spot where Xerxes had bridged two continents. The spectacle was a message: imperial power can be unmade where it was made.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Dying_Gaul.jpg/1024px-Dying_Gaul.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/01-dying-gaul.jpg');"></div>
+            <p class="artwork-title">THE DYING GAUL</p>
+            <p class="artwork-detail">Roman marble copy, c. 230–220 BC, Capitoline Museums, Rome</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">A defeated warrior's final moments — vulnerability and defiance made eternal in stone.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 02 — Dark -->
+      <section class="dark">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">02</div>
+            <h1 class="slide-title">THE COSMIC<br>CRUSADE</h1>
+            <p class="slide-subtitle">Persia believed its empire was a moral project</p>
+            <p class="slide-body">Darius and his heirs ruled in the name of Ahura Mazda, the god of light and truth. All resistance was allegiance to 'the Lie' — a cosmic darkness threatening the universe. Punishment wasn't cruelty; it was spiritual hygiene.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Behistun_Inscription.jpg/1024px-Behistun_Inscription.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/02-behistun.jpg');"></div>
+            <p class="artwork-title">BEHISTUN INSCRIPTION</p>
+            <p class="artwork-detail">Rock relief, c. 520 BC, Mount Behistun, Kermanshah, Iran</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">Darius tramples a rebel beneath the winged figure of Ahura Mazda — carved 100 metres above the road, meant to be seen but never touched.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 03 — Light -->
+      <section class="light">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">03</div>
+            <h1 class="slide-title">DIVINE<br>MANDATE</h1>
+            <p class="slide-subtitle">The first universal moral order backed by empire</p>
+            <p class="slide-body">Drawing on Mesopotamian traditions stretching back to Hammurabi, the Persian kings claimed a sacred charge: to bring justice to the world. Their precedent — a king receiving law from a god — would echo across millennia.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Code_de_Hammurabi_1.jpg/800px-Code_de_Hammurabi_1.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/03-hammurabi.jpg');"></div>
+            <p class="artwork-title">STELE OF HAMMURABI</p>
+            <p class="artwork-detail">Basalt, c. 1792–1750 BC, Musée du Louvre, Paris</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">The sun-god Shamash hands Hammurabi the rod and ring of justice — the earliest surviving monument of law as sacred trust.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 04 — Light -->
+      <section class="light">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">04</div>
+            <h1 class="slide-title">THE EYE<br>ON STAGE</h1>
+            <p class="slide-subtitle">Greeks saw Persian universalism as terrifying despotism</p>
+            <p class="slide-body">Aristophanes put an actor on stage wearing an enormous eye on his head — mocking the Persian 'King's Eye' surveillance network. Where Persia saw cosmic order, Athens saw tyranny. Comedy became resistance.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/NAMA_Masque_esclave.jpg/800px-NAMA_Masque_esclave.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/04-theatre-mask.jpg');"></div>
+            <p class="artwork-title">TERRACOTTA THEATRE MASK</p>
+            <p class="artwork-detail">Greek, 2nd–1st century BC, The Metropolitan Museum of Art, New York</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">The exaggerated mouth of the comic mask — designed to carry laughter to 15,000 people in an open-air theatre.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 05 — Dark -->
+      <section class="dark">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">05</div>
+            <h1 class="slide-title">THE OBLIQUE<br>ONE</h1>
+            <p class="slide-subtitle">Greek gods were capricious, amoral, and radically contradictory</p>
+            <p class="slide-body">Apollo was healer and plague-bringer. Zeus raped mortals as a shower of gold. The gods demanded sacrifice and punished insults — but offered no ethical code. Light itself had a darkness to it.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Apollo_of_the_Belvedere.jpg/800px-Apollo_of_the_Belvedere.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/05-apollo-belvedere.jpg');"></div>
+            <p class="artwork-title">APOLLO BELVEDERE</p>
+            <p class="artwork-detail">Roman marble copy, c. AD 120–140, Musei Vaticani, Vatican City</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">The god of light, music, healing — and plague. Perfect beauty concealing perfect indifference.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 06 — Light -->
+      <section class="light">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">06</div>
+            <h1 class="slide-title">THE UNWRITTEN<br>LAW</h1>
+            <p class="slide-subtitle">Greeks intuited a higher law but couldn't pin down its source</p>
+            <p class="slide-body">In Sophocles' Antigone, a princess defies a king's decree to honour unwritten divine laws — 'neither today nor yesterday were they born; they are eternal.' The tension between human legislation and timeless moral order remains unresolved.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lytras_nikiforos_antigone_polynices.jpeg/800px-Lytras_nikiforos_antigone_polynices.jpeg -->
+            <div class="artwork-img" style="background-image: url('../images/06-antigone-lytras.jpg');"></div>
+            <p class="artwork-title">ANTIGONE BEFORE THE BODY OF POLYNICES</p>
+            <p class="artwork-detail">Nikiforos Lytras, oil on canvas, 1865, National Gallery, Athens</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">The solitary act of conscience against the machinery of the state — a woman, dust in her hands, over a forbidden corpse.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 07 — Dark -->
+      <section class="dark">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">07</div>
+            <h1 class="slide-title">BEYOND<br>THE ALTAR</h1>
+            <p class="slide-subtitle">Philosophy emerged to resolve the contradictions of myth</p>
+            <p class="slide-body">From Xenophanes to Aristotle, thinkers rejected Homer's quarrelsome gods and searched for rational, mathematical principles governing the cosmos. The 'unmoved mover' replaced Zeus — but at the cost of a god who cared.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/1024px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/07-school-of-athens.jpg');"></div>
+            <p class="artwork-title">THE SCHOOL OF ATHENS</p>
+            <p class="artwork-detail">Raphael, fresco, 1509–1511, Apostolic Palace, Vatican City</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">Plato points upward to the ideal; Aristotle gestures toward the earth. Twenty-five centuries of philosophy framed in a single gesture.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 08 — Light -->
+      <section class="light">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">08</div>
+            <h1 class="slide-title">THE NATURAL<br>ORDER</h1>
+            <p class="slide-subtitle">Aristotle's rational universe justified brutal hierarchies</p>
+            <p class="slide-body">The same cosmic framework that found divine pattern in the stars also concluded that men should rule women, Greeks should rule barbarians, and the poor were unfit for citizenship. Philosopher-rule in Athens stripped the masses of their votes.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Rembrandt_-_Aristotle_with_a_Bust_of_Homer_-_Google_Art_Project.jpg/800px-Rembrandt_-_Aristotle_with_a_Bust_of_Homer_-_Google_Art_Project.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/08-rembrandt-aristotle.jpg');"></div>
+            <p class="artwork-title">ARISTOTLE WITH A BUST OF HOMER</p>
+            <p class="artwork-detail">Rembrandt van Rijn, oil on canvas, 1653, The Metropolitan Museum of Art, New York</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">The philosopher's hand rests on the blind poet — reason confronting the mythos it claims to supersede, unable to let go.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 09 — Dark -->
+      <section class="dark">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">09</div>
+            <h1 class="slide-title">THE WORLD<br>BROKEN OPEN</h1>
+            <p class="slide-subtitle">Alexander's conquests shattered the old Greek world</p>
+            <p class="slide-body">The scale of the new Macedonian empires dwarfed the city-state. Traditional gods seemed inadequate to explain events this enormous. People turned to Fortune — Tyche — a terrifying, impersonal force of blind chance.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Alexander_Mosaic-high_res_fragment.jpg/1024px-Alexander_Mosaic-high_res_fragment.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/09-alexander-mosaic.jpg');"></div>
+            <p class="artwork-title">ALEXANDER MOSAIC</p>
+            <p class="artwork-detail">Floor mosaic, c. 100 BC (after a c. 310 BC painting), National Archaeological Museum, Naples</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">Alexander charges Darius III at Issus — the moment one world-order collapses into another.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 10 — Light -->
+      <section class="light">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">10</div>
+            <h1 class="slide-title">THE SPARK<br>WITHIN</h1>
+            <p class="slide-subtitle">The Stoics offered the most radical response: nature itself is God</p>
+            <p class="slide-body">A divine rational principle — the Logos — pervaded all matter. Every human, regardless of sex, ethnicity, or status, carried a divine spark: syneidesis, conscience. This was a genuinely universalist claim — and it would seed the future.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/MAN_Atlante_fronte_1040572.JPG/800px-MAN_Atlante_fronte_1040572.JPG -->
+            <div class="artwork-img" style="background-image: url('../images/10-farnese-atlas.jpg');"></div>
+            <p class="artwork-title">FARNESE ATLAS</p>
+            <p class="artwork-detail">Roman marble, 2nd century AD, National Archaeological Museum, Naples</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">Atlas bears the celestial sphere — the oldest known depiction of the classical constellations. The cosmos as burden, as beauty, as order.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 11 — Dark -->
+      <section class="dark">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">11</div>
+            <h1 class="slide-title">EMPIRE<br>AS DESTINY</h1>
+            <p class="slide-subtitle">Rome co-opted Greek philosophy to justify its conquests</p>
+            <p class="slide-body">Posidonius and Cicero repackaged Stoic natural law as vindication. Wars, slavery, plunder — all fated, rational, in accordance with cosmic order. 'Natural law' became the moral armour of an empire.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Augustus_of_Prima_Porta_%28inv._2290%29.jpg/800px-Augustus_of_Prima_Porta_%28inv._2290%29.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/11-augustus-prima-porta.jpg');"></div>
+            <p class="artwork-title">AUGUSTUS OF PRIMA PORTA</p>
+            <p class="artwork-detail">Marble, 1st century AD, Musei Vaticani, Vatican City</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">The emperor as god-touched commander — barefoot like a deity, breastplate telling the story of cosmic victory.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+      <!-- Slide 12 — Dark -->
+      <section class="dark">
+        <div class="slide-inner">
+          <div class="col-left">
+            <div class="slide-num">12</div>
+            <h1 class="slide-title">THE FUTURE<br>BELONGS<br>TO THE STRONG</h1>
+            <p class="slide-subtitle">Before Christianity, competing visions of power all served the powerful</p>
+            <p class="slide-body">Persian cosmic justice. Greek divine caprice. Philosophical rational order. Imperial destiny. Each claimed universality. Each ultimately served the strong. The stage is set — for a revolution that would invert it all.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="col-right">
+            <!-- Wikimedia: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Nike_of_Samothrake_Louvre_Ma2369_n4.jpg/800px-Nike_of_Samothrake_Louvre_Ma2369_n4.jpg -->
+            <div class="artwork-img" style="background-image: url('../images/12-winged-victory.jpg');"></div>
+            <p class="artwork-title">WINGED VICTORY OF SAMOTHRACE</p>
+            <p class="artwork-detail">Parian marble, c. 190 BC, Musée du Louvre, Paris</p>
+            <hr class="artwork-hr">
+            <p class="curator-note">Striding into the wind at the prow of a ship — triumph without a face, momentum without mercy.</p>
+          </div>
+          <div class="slide-footer">DOMINION — TOM HOLLAND — CHAPTER 1: ATHENS, 479 BC</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="../node_modules/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 960,
+      height: 540,
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2.0,
+      hash: true,
+      history: true,
+      controls: true,
+      progress: true,
+      center: false,
+      transition: 'fade',
+      transitionSpeed: 'slow',
+      backgroundTransition: 'fade'
+    });
+  </script>
+</body>
+</html>
