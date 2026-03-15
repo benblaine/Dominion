@@ -1,0 +1,17 @@
+{
+  "name": "dominion-deck",
+  "version": "1.0.0",
+  "description": "12-slide PPTX: Dominion Chapter 1 (Tom Holland) with antiquity artwork",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "verify": "echo 'Open output/dominion_ch1.pptx and visually inspect all 12 slides'"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1",
+    "sharp": "^0.34.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
